@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diamond Price Predictor</title>
+</head>
+<body>
+    <h2>Diamond Price Prediction</h2>
+
+    <form method="POST">
+        <label>Carat Weight:</label><br>
+        <input type="number" step="0.01" name="carat_weight" required><br><br>
+
+        <label>Cut (Shape):</label><br>
+        <select name="cut">
+            <option>Round</option>
+            <option>Oval</option>
+            <option>Pear</option>
+            <option>Princess</option>
+            <option>Emerald</option>
+        </select><br><br>
+
+        <label>Color:</label><br>
+        <select name="color">
+            <option>D</option><option>E</option><option>F</option>
+            <option>G</option><option>H</option><option>I</option>
+        </select><br><br>
+
+        <label>Clarity:</label><br>
+        <select name="clarity">
+            <option>IF</option><option>VVS1</option><option>VVS2</option>
+            <option>VS1</option><option>VS2</option>
+            <option>SI1</option><option>SI2</option>
+        </select><br><br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if price %}
+        <h3>Estimated Price: ₹ {{ price }}</h3>
+    {% endif %}
+</body>
+</html>
